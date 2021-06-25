@@ -7,13 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F26502242685985D00383C63 /* XingAPIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2650217268596CF00383C63 /* XingAPIMobile.framework */; };
+		F26502252685985D00383C63 /* XingAPIMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2650217268596CF00383C63 /* XingAPIMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2650228268598DA00383C63 /* XingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2650227268598DA00383C63 /* XingViewModel.swift */; };
+		F265022A26859AC700383C63 /* XingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F265022926859AC700383C63 /* XingService.swift */; };
+		F265022C26859AE200383C63 /* XingDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F265022B26859AE200383C63 /* XingDataFetcher.swift */; };
+		F265022E2685A22000383C63 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F265022D2685A22000383C63 /* Model.swift */; };
 		F28CAD5426840CFC00A5C0BA /* MVVM_MTSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CAD5326840CFC00A5C0BA /* MVVM_MTSApp.swift */; };
 		F28CAD5626840CFC00A5C0BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CAD5526840CFC00A5C0BA /* ContentView.swift */; };
 		F28CAD5826840CFD00A5C0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28CAD5726840CFD00A5C0BA /* Assets.xcassets */; };
 		F28CAD5B26840CFD00A5C0BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28CAD5A26840CFD00A5C0BA /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F26502262685985D00383C63 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F26502252685985D00383C63 /* XingAPIMobile.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F2650217268596CF00383C63 /* XingAPIMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XingAPIMobile.framework; sourceTree = "<group>"; };
+		F26502222685981A00383C63 /* XingAPIMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XingAPIMobile.framework; sourceTree = "<group>"; };
+		F2650227268598DA00383C63 /* XingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XingViewModel.swift; sourceTree = "<group>"; };
+		F265022926859AC700383C63 /* XingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XingService.swift; sourceTree = "<group>"; };
+		F265022B26859AE200383C63 /* XingDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XingDataFetcher.swift; sourceTree = "<group>"; };
+		F265022D2685A22000383C63 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F28CAD5026840CFC00A5C0BA /* MVVM_MTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_MTS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28CAD5326840CFC00A5C0BA /* MVVM_MTSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_MTSApp.swift; sourceTree = "<group>"; };
 		F28CAD5526840CFC00A5C0BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,12 +53,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26502242685985D00383C63 /* XingAPIMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F2650214268596CF00383C63 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				F2650215268596CF00383C63 /* XingAPI */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		F2650215268596CF00383C63 /* XingAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F2650216268596CF00383C63 /* Simulator */,
+				F2650218268596CF00383C63 /* iPhone */,
+			);
+			path = XingAPI;
+			sourceTree = "<group>";
+		};
+		F2650216268596CF00383C63 /* Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				F2650217268596CF00383C63 /* XingAPIMobile.framework */,
+			);
+			path = Simulator;
+			sourceTree = "<group>";
+		};
+		F2650218268596CF00383C63 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				F26502222685981A00383C63 /* XingAPIMobile.framework */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
 		F28CAD4726840CFC00A5C0BA = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +114,13 @@
 			children = (
 				F28CAD5326840CFC00A5C0BA /* MVVM_MTSApp.swift */,
 				F28CAD5526840CFC00A5C0BA /* ContentView.swift */,
+				F2650227268598DA00383C63 /* XingViewModel.swift */,
+				F265022D2685A22000383C63 /* Model.swift */,
+				F265022926859AC700383C63 /* XingService.swift */,
+				F265022B26859AE200383C63 /* XingDataFetcher.swift */,
 				F28CAD5726840CFD00A5C0BA /* Assets.xcassets */,
 				F28CAD5C26840CFD00A5C0BA /* Info.plist */,
+				F2650214268596CF00383C63 /* Library */,
 				F28CAD5926840CFD00A5C0BA /* Preview Content */,
 			);
 			path = MVVM_MTS;
@@ -79,6 +144,7 @@
 				F28CAD4C26840CFC00A5C0BA /* Sources */,
 				F28CAD4D26840CFC00A5C0BA /* Frameworks */,
 				F28CAD4E26840CFC00A5C0BA /* Resources */,
+				F26502262685985D00383C63 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,8 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F265022C26859AE200383C63 /* XingDataFetcher.swift in Sources */,
 				F28CAD5626840CFC00A5C0BA /* ContentView.swift in Sources */,
 				F28CAD5426840CFC00A5C0BA /* MVVM_MTSApp.swift in Sources */,
+				F265022E2685A22000383C63 /* Model.swift in Sources */,
+				F2650228268598DA00383C63 /* XingViewModel.swift in Sources */,
+				F265022A26859AC700383C63 /* XingService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +340,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MVVM_MTS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MVVM_MTS/Library/XingAPI/Simulator",
+					"$(PROJECT_DIR)/MVVM_MTS/Library/XingAPI/iPhone",
+				);
 				INFOPLIST_FILE = MVVM_MTS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -291,6 +366,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MVVM_MTS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MVVM_MTS/Library/XingAPI/Simulator",
+					"$(PROJECT_DIR)/MVVM_MTS/Library/XingAPI/iPhone",
+				);
 				INFOPLIST_FILE = MVVM_MTS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
