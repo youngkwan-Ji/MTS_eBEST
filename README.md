@@ -1,2 +1,2 @@
-# MVVM_MTS
-eBEST투자증권의 XingAPI를 기반으로 한 MTS 구현
+# MTS_eBEST
+eBEST증권 XingAPI 기반 MTS 및 데이터수집
